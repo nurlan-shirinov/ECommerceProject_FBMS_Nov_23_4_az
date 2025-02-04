@@ -3,12 +3,12 @@
 <section class="list-group">
     @foreach (var item in Model.Categories)
     {
-        var css = "list-group-item ";
+        var css = "list-group-item";
 
-        @if (item.CategoryId == Model.CurrentCategory)
+      @*   @if (item.CategoryId == Model.CurrentCategory)
         {
-            css = "active";
-        }
+            css = " active";
+        } *@
 
         <a style="cursor:pointer;" href="/product/index?categoryId=@item.CategoryId" class=@css>@item.CategoryName</a>
     }

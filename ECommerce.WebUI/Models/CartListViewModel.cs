@@ -2,12 +2,7 @@
 
 namespace ECommerce.WebUI;
 
-public class CartSummaryViewModel
+public class CartListViewModel
 {
     public Cart Cart { get; set; }
-}
-
-class Name
-{
-    string surname { get; set; }
 }

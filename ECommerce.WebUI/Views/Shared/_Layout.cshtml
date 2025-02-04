@@ -37,7 +37,6 @@
                             @await Component.InvokeAsync("CartSummary")
                         </li>
                     </ul>
-
                 </div>
             </div>
         </nav>
@@ -49,6 +48,12 @@
                 @await Component.InvokeAsync("CategoryList")
             </div>
             <main role="main" class="pb-3 col-md-10">
+                @if (TempData["message"] != null)
+                {
+                    <div class="alert alert-info" role="alert">
+                        @TempData["message"]
+                    </div>
+                }
                 @RenderBody()
             </main>
         </div>
